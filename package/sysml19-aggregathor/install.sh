@@ -16,11 +16,19 @@
 cd ${INSTALL_DIR}
 
 # Clean install
-if [ -d "src" ]; then
+if [ -d "${PACKAGE_WORK_DIR}" ]; then
   echo ""
-  echo "Cleaning ${INSTALL_DIR}/src directory ..."
+  echo "Cleaning ${INSTALL_DIR}/${PACKAGE_WORK_DIR} directory ..."
   echo ""
-  rm -rf src
+  rm -rf ${PACKAGE_WORK_DIR}
+fi
+
+# Clean install
+if [ -f "${PACKAGE_NAME}" ]; then
+  echo ""
+  echo "Cleaning ${INSTALL_DIR}/${PACKAGE_NAME} file ..."
+  echo ""
+  rm -f ${PACKAGE_NAME}
 fi
 
 # Downloading file

@@ -63,9 +63,7 @@ def setup(i):
     ep=cus.get('env_prefix','')
     if ep!='' and fp!='':
        p1=os.path.dirname(fp)
-       p2=os.path.dirname(p1)
 
-       env[ep]=p2
-       env[ep+'_BIN']=p1
+       env[ep]=p1
 
     return {'return':0, 'bat':s}

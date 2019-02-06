@@ -5,6 +5,7 @@
     "install_env": {
       "PACKAGE_URL": "https://zenodo.org/record/2548779/files",
       "PACKAGE_NAME": "AggregaThor.zip",
+      "PACKAGE_WORK_DIR": "AggregaThor"
     },
     "version": "1.0"
   },
@@ -17,7 +18,7 @@
       "tags": "compiler,python"
     }
   },
-  "end_full_path_universal": "install/src/AggregaThor/runner.py",
+  "end_full_path_universal": "AggregaThor/runner.py",
   "only_for_host_os_tags": [
     "linux"
   ],
