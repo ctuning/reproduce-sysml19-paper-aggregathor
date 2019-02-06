@@ -14,8 +14,16 @@
       "add_to_path": "yes",
       "local": "yes",
       "name": "Python",
+      "sort": 10,
+      "tags": "compiler,python",
+      "version_from": [3,5,0]
+    },
+    "lib-tensorflow": {
+      "add_to_path": "yes",
+      "local": "yes",
+      "name": "TensorFlow CPU",
       "sort": 20,
-      "tags": "compiler,python"
+      "tags": "lib,tensorflow,vcpu"
     }
   },
   "end_full_path_universal": "AggregaThor/runner.py",
@@ -32,6 +40,7 @@
     "tool",
     "sysml19",
     "aggregathor",
+    "vcpu",
     "v1.0",
     "v1"
   ]
