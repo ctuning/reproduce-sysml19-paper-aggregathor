@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #
-# Installation script for Scons.
+# Installation script for Aggregathor.
 #
 # See CK LICENSE for licensing details.
 # See CK COPYRIGHT for copyright details.
