@@ -1,0 +1,76 @@
+{
+  "backup_data_uid": "fb1f01bafc9dec64", 
+  "data_name": "sysml19-aggregathor", 
+  "main_language": "python", 
+  "no_compile": "yes", 
+  "no_target_file": "yes", 
+  "print_files_after_run": [
+    "stderr.log", 
+    "stdout.log"
+  ], 
+  "process_in_tmp": "yes", 
+  "program": "yes", 
+  "run_cmds": {
+    "local-mnist": {
+      "ignore_return_code": "no", 
+      "run_time": {
+        "run_cmd_main": "..$#dir_sep#$ck_run$#script_ext#$", 
+        "run_cmd_out1": "stdout.log", 
+        "run_cmd_out2": "stderr.log", 
+        "run_output_files": [
+          "stdout.log", 
+          "stderr.log"
+        ], 
+        "run_set_env2": {
+          "EXPERIMENT": "mnist"
+        }
+      }
+    }, 
+    "local-mnist-attack": {
+      "ignore_return_code": "no", 
+      "run_time": {
+        "run_cmd_main": "..$#dir_sep#$ck_run$#script_ext#$", 
+        "run_cmd_out1": "stdout.log", 
+        "run_cmd_out2": "stderr.log", 
+        "run_output_files": [
+          "stdout.log", 
+          "stderr.log"
+        ], 
+        "run_set_env2": {
+          "EXPERIMENT": "mnistAttack"
+        }
+      }
+    }
+  }, 
+  "run_deps": {
+    "aggregathor": {
+      "local": "yes", 
+      "name": "SysML19 Aggregathor", 
+      "skip_default": "yes", 
+      "sort": 10, 
+      "tags": "tool,sysml19,aggregathor"
+    }
+  }, 
+  "run_vars": {
+    "AGGREGATOR": "average", 
+    "CHECKPOINT_DELTA": -1, 
+    "CHECKPOINT_PERIOD": -1, 
+    "EVALUATION_DELTA": 100, 
+    "EVALUATION_PERIOD": -1, 
+    "EV_JOB_NAME": "local", 
+    "EXPERIMENT": "mnist", 
+    "LEARNING_RATE_ARGS": "initial-rate:0.05", 
+    "MAX_STEP": 10000, 
+    "NB_WORKERS": 4, 
+    "PS_JOB_NAME": "local", 
+    "SERVER": "{\"local\": [\"127.0.0.1:7000\"]}", 
+    "SUMMARY_DELTA": -1, 
+    "SUMMARY_PERIOD": -1, 
+    "WK_JOB_NAME": "local"
+  }, 
+  "tags": [
+    "program", 
+    "sysml19", 
+    "aggregathor"
+  ]
+}
