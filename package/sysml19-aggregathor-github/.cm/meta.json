@@ -1,19 +1,19 @@
 {
   "customize": {
     "extra_dir": "",
-    "git_src_dir": "src",
+    "git_src_dir": "AggregaThor",
     "install_env": {
-      "PACKAGE_NAME": "AggregaThor.zip",
-      "PACKAGE_URL": "https://zenodo.org/record/2548779/files",
+      "PACKAGE_URL": "https://github.com/LPD-EPFL/AggregaThor",
       "PACKAGE_WORK_DIR": "AggregaThor"
     },
-    "version": "1.0"
+    "use_git_revision": "yes",
+    "version": "master"
   },
   "deps": {
     "lib-tensorflow": {
       "add_to_path": "yes",
       "local": "yes",
-      "name": "TensorFlow CPU",
+      "name": "TensorFlow",
       "sort": 20,
       "version_from":[1,10,1],
       "version_to":[1,11,999],
@@ -41,15 +41,16 @@
   "only_for_target_os_tags": [
     "linux"
   ],
+  "package_extra_name": " (GitHub)",
   "process_script": "install",
   "soft_uoa": "ae86f545d6a4737f",
   "sort": -100,
-  "suggested_path": "tool-sysml19-aggregathor",
+  "suggested_path": "tool-sysml19-aggregathor-github",
   "tags": [
     "tool",
     "sysml19",
     "aggregathor",
-    "vcpu",
+    "vmaster",
     "v1.0",
     "v1"
   ],
