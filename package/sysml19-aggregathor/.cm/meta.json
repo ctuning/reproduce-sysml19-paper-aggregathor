@@ -15,6 +15,8 @@
       "local": "yes",
       "name": "TensorFlow CPU",
       "sort": 20,
+      "version_from":[1,6,0],
+      "version_to":[1,11,999],
       "tags": "lib,tensorflow,vcpu"
     },
     "python": {
