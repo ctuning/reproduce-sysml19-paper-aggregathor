@@ -3,7 +3,7 @@
 cd ${CK_ENV_TOOL_SYSML19_AGGREGATHOR}
 
 ${CK_ENV_COMPILER_PYTHON_FILE} runner.py \
- --server '${SERVER}' \
+ --server '{"local": ["127.0.0.1:7000"]}' \
  --ps-job-name ${PS_JOB_NAME} \
  --wk-job-name ${WK_JOB_NAME} \
  --ev-job-name ${EV_JOB_NAME} \

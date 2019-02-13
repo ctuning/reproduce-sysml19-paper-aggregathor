@@ -15,9 +15,9 @@
       "local": "yes",
       "name": "TensorFlow CPU",
       "sort": 20,
-      "version_from":[1,6,0],
+      "version_from":[1,10,1],
       "version_to":[1,11,999],
-      "tags": "lib,tensorflow,vcpu"
+      "tags": "lib,tensorflow,vprebuilt"
     },
     "python": {
       "add_to_path": "yes",

@@ -40,6 +40,13 @@
           "EXPERIMENT": "mnistAttack"
         }
       }
+    }, 
+    "runner": {
+      "ignore_return_code": "no", 
+      "run_time": {
+        "run_cmd_main": "..$#dir_sep#$ck_run$#script_ext#$"
+      }, 
+      "sort": -100
     }
   }, 
   "run_deps": {
@@ -63,7 +70,6 @@
     "MAX_STEP": 10000, 
     "NB_WORKERS": 4, 
     "PS_JOB_NAME": "local", 
-    "SERVER": "{\"local\": [\"127.0.0.1:7000\"]}", 
     "SUMMARY_DELTA": -1, 
     "SUMMARY_PERIOD": -1, 
     "WK_JOB_NAME": "local"
