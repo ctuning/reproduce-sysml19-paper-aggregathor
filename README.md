@@ -57,8 +57,13 @@ $ ck pull all
 
 # Reproducibility badges
 
-Based on above evaluation, we awarded the following badges to this paper:
+## ACM badges
+* ACM artifacts available 
+* ACM artifacts evaluated - reusable 
 
-* ACM artifacts available [![](https://www.acm.org/binaries/content/gallery/acm/publications/replication-badges/artifacts_available_dl.jpg)](https://www.acm.org/publications/policies/artifact-review-badging)
-* ACM artifacts evaluated - reusable [![](https://www.acm.org/binaries/content/gallery/acm/publications/large-replication-badges/artifacts_evaluated_reusable.jpg)](https://www.acm.org/publications/policies/artifact-review-badging)
-* [![automation](https://github.com/ctuning/ck-guide-images/blob/master/ck-artifact-automated-and-reusable.svg)](http://cKnowledge.org)
+[![](https://www.acm.org/binaries/content/gallery/acm/publications/replication-badges/artifacts_available_dl.jpg)](https://www.acm.org/publications/policies/artifact-review-badging)
+[![](https://www.acm.org/binaries/content/gallery/acm/publications/large-replication-badges/artifacts_evaluated_reusable_dl.jpg)](https://www.acm.org/publications/policies/artifact-review-badging)
+
+## cTuning foundation badges
+[![automation](https://github.com/ctuning/ck-guide-images/blob/master/ck-artifact-automated-and-reusable.svg)](http://cTuning.org/ae)
+[![workflow](https://github.com/ctuning/ck-guide-images/blob/master/ck-workflow.svg)](http://cKnowledge.org)
