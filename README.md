@@ -34,7 +34,7 @@ and report your feedback [here](https://github.com/ctuning/reproduce-sysml19-pap
 
 We implemented a simple [CK workflow (pipeline)](http://cKnowledge.org) 
 with shared [CK packages](http://cKnowledge.org/shared-packages.html)
-to automate and facilitate this evaluation.
+for the TensorFlow framework, models and datasets to automate and facilitate this evaluation.
 
 ## CK framework
 
@@ -55,10 +55,36 @@ $ ck pull all
 
 # Evaluation
 
- Test 
+We created CK program workflow (pipeline) with [meta information](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/.cm/meta.json) 
+which describes dependencies (code, models and data sets), automates their installation 
+during the first execution (TensorFlow, SLIM models, MNIST, CIFAR10),
+and assembles different command lines.
+
+* [CK run script for MNIST](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/ck_run.sh)
+* [CK run script for CIFAR10 with automated installation of the model and the dataset](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/ck_run_cifar10.sh) 
+
+* [Default environment](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/.cm/meta.json#L101)
+
+## Local deployment
+
+**Platform:** [GRID5000](https://www.grid5000.fr); Rennes site; [Paravance node](https://www.grid5000.fr/mediawiki/index.php/Rennes:Hardware#paravance)
+
+### MNIST
+
+Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/1)
+
+### MNIST-attack
+
+Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/2)
+
+
+
+
 
 
 # Reproducibility badges
+
+We awarded the following badges based on above evaluation:
 
 ## ACM badges
 * ACM artifacts available 
