@@ -7,6 +7,42 @@
   "process_in_tmp": "yes", 
   "program": "yes", 
   "run_cmds": {
+    "local-cifar10": {
+      "ignore_return_code": "no", 
+      "print_files_after_run": [
+        "stderr.log", 
+        "stdout.log"
+      ], 
+      "run_deps": {
+        "dataset-tensorflow-slim-cifar10": {
+          "local": "yes", 
+          "name": "CIFAR10 dataset (TensorFlow Slim)", 
+          "skip_default": "yes", 
+          "sort": 20, 
+          "tags": "dataset,tensorflow-slim,cifar10"
+        }, 
+        "tensorflow-model-api": {
+          "local": "yes", 
+          "name": "TensorFlow Models (Source)", 
+          "skip_from_bat": "yes", 
+          "sort": 10, 
+          "tags": "tensorflowmodel,api"
+        }
+      }, 
+      "run_time": {
+        "run_cmd_main": "..$#dir_sep#$ck_run_cifar10$#script_ext#$", 
+        "run_cmd_out1": "stdout.log", 
+        "run_cmd_out2": "stderr.log", 
+        "run_output_files": [
+          "stdout.log", 
+          "stderr.log"
+        ], 
+        "run_set_env2": {
+          "EXPERIMENT": "cnnet"
+        }
+      }, 
+      "sort": 100
+    }, 
     "local-mnist": {
       "ignore_return_code": "no", 
       "run_time": {
