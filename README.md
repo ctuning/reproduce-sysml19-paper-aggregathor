@@ -15,7 +15,7 @@ and report your feedback [here](https://github.com/ctuning/reproduce-sysml19-pap
 * **Artifact DOI:** [Zenodo](https://doi.org/10.5281/zenodo.2548779)
 * **Evaluation methodology:** [SysML](http://cTuning.org/ae/sysml2019.html), [ACM badging](https://www.acm.org/publications/policies/artifact-review-badging), [ACM REQUEST](http://cKnowledge.org/request)
 * **Automated workflow:** [CK](https://github.com/ctuning/ck)
-* **Evaluators:** 
+* **Evaluators:** [Matteo Interlandi](https://interesaaat.github.io) (Microsoft) and [Grigori Fursin](http://fursin.net/research.html) (cTuning foundation and dividiti)
 
 # Artifact check-list (meta-information)
 
@@ -63,7 +63,17 @@ and assembles different command lines.
 * [CK run script for MNIST](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/ck_run.sh)
 * [CK run script for CIFAR10 with automated installation of the model and the dataset](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/ck_run_cifar10.sh) 
 
-* [Default environment](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/.cm/meta.json#L101)
+* [Default environment variables](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/.cm/meta.json#L101)
+
+It is possible to run this pipeline as follows:
+```
+$ ck run program:sysml19-aggregathor
+```
+
+You can also customize this pipeline by changing above environment variables using CK CLI as follows:
+```
+$ ck run program:sysml19-aggregathor --env.AGGREGATOR="average" ...
+```
 
 ## Local deployment
 
@@ -71,14 +81,41 @@ and assembles different command lines.
 
 ### MNIST
 
+CK CLI:
+```
+$ ck run program:sysml19-aggregathor --cmd_key=local-mnist
+```
+
 Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/1)
 
 ### MNIST-attack
 
+CK CLI:
+```
+$ ck run program:sysml19-aggregathor --cmd_key=local-mnist-attack
+```
+
 Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/2)
 
+### CIFAR10
 
+You can rely on CK to install this dataset and related code automatically or you can install via CK CLI before running the program pipeline as follows:
+```
+$ ck install package --tags=dataset,tensorflow-slim,cifar10
+```
 
+Note that you may need ~1GB of free space and it will take some time to download TensorFlow models and process this data set!
+
+CK CLI:
+```
+$ ck run program:sysml19-aggregathor --cmd_key=local-cifar10
+```
+
+TBD
+
+## Distributed depolyment
+
+TBD
 
 
 
