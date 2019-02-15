@@ -45,11 +45,11 @@
     }, 
     "local-mnist": {
       "ignore_return_code": "no", 
+      "print_files_after_run": [
+        "stderr.log", 
+        "stdout.log"
+      ], 
       "run_time": {
-        "print_files_after_run": [
-          "stderr.log", 
-          "stdout.log"
-        ], 
         "run_cmd_main": "..$#dir_sep#$ck_run$#script_ext#$", 
         "run_cmd_out1": "stdout.log", 
         "run_cmd_out2": "stderr.log", 
@@ -64,11 +64,11 @@
     }, 
     "local-mnist-attack": {
       "ignore_return_code": "no", 
+      "print_files_after_run": [
+        "stderr.log", 
+        "stdout.log"
+      ], 
       "run_time": {
-        "print_files_after_run": [
-          "stderr.log", 
-          "stdout.log"
-        ], 
         "run_cmd_main": "..$#dir_sep#$ck_run$#script_ext#$", 
         "run_cmd_out1": "stdout.log", 
         "run_cmd_out2": "stderr.log", 
