@@ -7,7 +7,7 @@
       "PACKAGE_URL": "https://zenodo.org/record/2548779/files", 
       "PACKAGE_WORK_DIR": "AggregaThor"
     }, 
-    "version": "1.0"
+    "version": "sysml19"
   }, 
   "deps": {
     "lib-tensorflow": {
@@ -40,7 +40,7 @@
       ]
     }
   }, 
-  "package_extra_name": " (zenodo snapshot)",
+  "package_extra_name": " (zenodo snapshot for SysML'19 paper)",
   "end_full_path": {
     "linux": "AggregaThor/runner.py"
   }, 
@@ -58,9 +58,7 @@
     "tool", 
     "sysml19", 
     "aggregathor", 
-    "vzenodo",
-    "v1.0", 
-    "v1"
+    "vzenodo"
   ], 
   "template": "yes", 
   "template_type": "simple package for artifact evaluation (SysML'19)"

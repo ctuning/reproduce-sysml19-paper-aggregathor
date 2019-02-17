@@ -50,9 +50,7 @@
     "tool",
     "sysml19",
     "aggregathor",
-    "vmaster",
-    "v1.0",
-    "v1"
+    "vmaster"
   ],
   "template": "yes",
   "template_type": "simple package for artifact evaluation (SysML'19)"
