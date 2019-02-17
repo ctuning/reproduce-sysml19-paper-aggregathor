@@ -1,6 +1,3 @@
-[![](https://www.acm.org/binaries/content/gallery/acm/publications/replication-badges/artifacts_available_dl.jpg)](https://www.acm.org/publications/policies/artifact-review-badging)
-[![](https://www.acm.org/binaries/content/gallery/acm/publications/replication-badges/artifacts_evaluated_reusable_dl.jpg)](https://www.acm.org/publications/policies/artifact-review-badging)
-
 [![automation](https://github.com/ctuning/ck-guide-images/blob/master/ck-artifact-automated-and-reusable.svg)](http://cTuning.org/ae)
 [![workflow](https://github.com/ctuning/ck-guide-images/blob/master/ck-workflow.svg)](http://cKnowledge.org)
 
@@ -71,8 +68,30 @@ $ ck run program:sysml19-aggregathor
 ```
 
 You can also customize this pipeline by changing above environment variables using CK CLI as follows:
+
 ```
-$ ck run program:sysml19-aggregathor --env.AGGREGATOR="average" ...
+$ ck run program:sysml19-aggregathor --env.AGGREGATOR=average
+```
+
+or with all vars:
+
+```
+$ ck run program:sysml19-aggregathor \
+    --env.EXPERIMENT=mnist \ 
+    --env.WK_JOB_NAME=local \
+    --env.EV_JOB_NAME=local \ 
+    --env.PS_JOB_NAME=local \ 
+    --env.MAX_STEP=10000 \
+    --env.AGGREGATOR=average \ 
+    --env.NB_WORKERS=4 \ 
+    --env.CHECKPOINT_DELTA=-1 \ 
+    --env.CHECKPOINT_PERIOD=-1 \ 
+    --env.EVALUATION_DELTA=100 \ 
+    --env.EVALUATION_PERIOD=-1 \ 
+    --env.LEARNING_RATE_ARGS="initial-rate:0.05" \
+    --env.SUMMARY_DELTA=-1 \
+    --env.SUMMARY_PERIOD=-1 
+
 ```
 
 ## Local deployment
