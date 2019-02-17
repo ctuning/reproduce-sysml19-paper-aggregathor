@@ -14,8 +14,13 @@ ln -s ${CK_ENV_TENSORFLOW_MODELS}/slim slim_package
 unlink slim
 ln -s ${CK_ENV_TENSORFLOW_MODELS}/slim slim
 
-cd datasets
+if [ -d "datasets" ]; then
+  cd datasets
+else
+  cd slim_datasets
+fi
+
 unlink cifar10
-ln -s ${CK_ENV_DATASET_IMAGENET_TRAIN_TF} cifar10
+ln -s ${CK_ENV_DATASET_TF_SLIM} cifar10
 
 . ${cwd}/../ck_run.sh
