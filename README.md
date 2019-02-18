@@ -155,7 +155,7 @@ $ ck run program:sysml19-aggregathor --cmd_key=local-cifar10
 
 Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/3)
 
-## Distributed depolyment
+## Distributed deployment
 
 TBD
 
