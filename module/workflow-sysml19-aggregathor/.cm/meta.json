@@ -3,11 +3,22 @@
     "run": {
       "desc": "run workflow"
     }
-  },
-  "copyright": "See CK COPYRIGHT.txt for copyright details",
-  "desc": "Workflow to automate validation of results from the SysML'19 paper: \"AggregaThor: Byzantine Machine Learning via Robust Gradient Aggregation\"",
-  "developer": "Grigori Fursin",
-  "developer_email": "Grigori.Fursin@cTuning.org",
-  "developer_webpage": "http://fursin.net",
+  }, 
+  "aggregators": [
+    "averaged-median", 
+    "krum-co", 
+    "krum-py", 
+    "average", 
+    "median", 
+    "krum-tf", 
+    "average-nan", 
+    "bulyan-co", 
+    "bulyan-py"
+  ], 
+  "copyright": "See CK COPYRIGHT.txt for copyright details", 
+  "desc": "Workflow to automate validation of results from the SysML'19 paper: \"AggregaThor: Byzantine Machine Learning via Robust Gradient Aggregation\"", 
+  "developer": "Grigori Fursin", 
+  "developer_email": "Grigori.Fursin@cTuning.org", 
+  "developer_webpage": "http://fursin.net", 
   "license": "See CK LICENSE.txt for licensing details"
 }
