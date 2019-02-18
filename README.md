@@ -105,7 +105,7 @@ CK CLI:
 $ ck run program:sysml19-aggregathor --cmd_key=local-mnist
 ```
 
-Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/1)
+Validated results for the default aggregator: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/1)
 
 See all available aggregator plugins:
 ```
@@ -130,6 +130,8 @@ You can then use any of the following plugins: 'krum-py', 'bulyan-co', 'median',
 $ ck run program:sysml19-aggregathor --cmd_key=local-mnist --env.AGGREGATOR=krum-py
 ```
 
+Validated results for all aggregators: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/4)
+
 ### MNIST-attack
 
 CK CLI:
@@ -137,7 +139,25 @@ CK CLI:
 $ ck run program:sysml19-aggregathor --cmd_key=local-mnist-attack
 ```
 
-Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/2)
+Validated results for the default aggregator: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/2)
+
+We decided to create a simple CK workflow to automate execution of this program pipeline across all aggregators.
+We added it as follows (to show you how to create similar automated workflows and pipelines):
+```
+$ ck add reproduce-sysml19-paper-aggregathor:module:workflow-sysml19-aggregathor
+$ ck add_action module:workflow-sysml19-aggregathor --func=run
+```
+
+We then added the code for this workflow (see [here](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/module/workflow-sysml19-aggregathor/module.py#L36)).
+
+It is now possible to run this workflow from a command line as follows:
+```
+$ ck run workflow-sysml19-agregathor --cmd_key=local-mnist-attack
+```
+
+This workflow will create a directory 'results' in your current path, will run AgggregaThor with different aggregator plugins, and will record results (as text or in a reproducible CK format which is possible to replay).
+
+You can find results for mnist-attack on GRID5000 [here](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/5).
 
 ### CIFAR10
 
@@ -165,6 +185,7 @@ TBD
 
 * Improve [CK post-processing plugin](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/postprocess.py) for AggregaThor to automatically validate correctness or results
 * Add and test ImageNet [CK package](http://cKnowledge.org/shared-repos.html) compatible with AggregaThor
+* Improve [Jupyter notebook](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/tree/master/jnotebook/sysml19-aggregathor) with step-by-step guide (ck run jnotebook:sysml19-aggregathor)
 
 # Reproducibility badges
 

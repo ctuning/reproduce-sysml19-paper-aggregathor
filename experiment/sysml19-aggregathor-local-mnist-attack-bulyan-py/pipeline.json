@@ -1,0 +1,10 @@
+{
+  "cmd_key": "local-mnist-attack", 
+  "no_state_check": "yes", 
+  "dependencies": {}, 
+  "data_uoa": "sysml19-aggregathor", 
+  "env": {
+    "AGGREGATOR": "bulyan-py"
+  }, 
+  "tmp_dir": ""
+}
