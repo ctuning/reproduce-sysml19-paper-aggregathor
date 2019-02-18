@@ -107,6 +107,29 @@ $ ck run program:sysml19-aggregathor --cmd_key=local-mnist
 
 Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/1)
 
+See all available aggregator plugins:
+```
+$ ck run program:sysml19-aggregathor --cmd_key=local-mnist --env.AGGREGATOR=""
+```
+
+You should normally see the following:
+```
+...
+      Traceback (most recent call last):
+        File "runner.py", line 343, in <module>
+          aggregator = aggregators.instantiate(args.aggregator, args.nb_workers, args.nb_decl_byz_workers, args.aggregator_args)
+        File "/home/gfursin/CK-TOOLS/tool-sysml19-aggregathor-1.0-compiler.python-3.5.3-lib.tensorflow-1.11.0-linux-64/AggregaThor/tools.py", line 305, in instantiate
+          raise KeyError(cause)
+      KeyError: "Unknown name '', available GAR(s): 'krum-py', 'bulyan-co', 'median', 'average-nan', 'average', 'krum-tf', 'averaged-median', 'krum-co', 'bulyan-py'"
+
+```
+
+You can then use any of the following plugins: 'krum-py', 'bulyan-co', 'median', 'average-nan', 'average', 'krum-tf', 
+'averaged-median', 'krum-co', 'bulyan-py' (see the paper for more details):
+```
+$ ck run program:sysml19-aggregathor --cmd_key=local-mnist --env.AGGREGATOR=krum-py
+```
+
 ### MNIST-attack
 
 CK CLI:
