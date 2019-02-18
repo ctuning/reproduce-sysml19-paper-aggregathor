@@ -157,7 +157,7 @@ $ ck run workflow-sysml19-agregathor --cmd_key=local-mnist-attack
 
 This workflow will create a directory 'results' in your current path, will run AgggregaThor with different aggregator plugins, and will record results (as text or in a reproducible CK format which is possible to replay).
 
-You can find results for mnist-attack on GRID5000 [here]().
+You can find results for mnist-attack on GRID5000 [here](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/5).
 
 ### CIFAR10
 
@@ -185,6 +185,7 @@ TBD
 
 * Improve [CK post-processing plugin](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/postprocess.py) for AggregaThor to automatically validate correctness or results
 * Add and test ImageNet [CK package](http://cKnowledge.org/shared-repos.html) compatible with AggregaThor
+* Improve [Jupyter notebook](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/tree/master/jnotebook/sysml19-aggregathor) with step-by-step guide (ck run jnotebook:sysml19-aggregathor)
 
 # Reproducibility badges
 

@@ -1,0 +1,16 @@
+{
+  "backup_data_uid": "404c874e8e33f780", 
+  "backup_module_uid": "bc0409fb61f0aa82", 
+  "backup_module_uoa": "experiment", 
+  "control": {
+    "engine": "CK", 
+    "iso_datetime": "2019-02-18T22:06:32.678370", 
+    "version": [
+      "1", 
+      "9", 
+      "7", 
+      "1"
+    ]
+  }, 
+  "data_name": "sysml19-aggregathor-local-mnist-attack-bulyan-py"
+}
