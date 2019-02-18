@@ -113,7 +113,7 @@ def run(i):
             'data_uoa':'program',
 
             'iterations': 1,
-            'repetitions': 1,
+            'repetitions': 3, # statistical repetitions of the same program pipeline
 
             'record':'yes',
             'record_failed':'yes',
