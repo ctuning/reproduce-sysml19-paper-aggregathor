@@ -175,17 +175,72 @@ $ ck run program:sysml19-aggregathor --cmd_key=local-cifar10
 
 Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/3)
 
-## Distributed deployment
+## Distributed deployment (3 node example)
 
-TBD
+First you need to reserve nodes for 3 machines. For the sake of simplicity we called the following command 3 times on GRID5000:
+```
+$ oarsub -I -t allow_classic_ssh -p "cluster='paravance'" -l nodes=1
+$ oarsub -I -t allow_classic_ssh -p "cluster='paravance'" -l nodes=1
+$ oarsub -I -t allow_classic_ssh -p "cluster='paravance'" -l nodes=1
+```
 
+Let's say that we connected to the following nodes: paravance-8, paravance-9 and paravance-10.
 
+We now need to describe configuration of our cluster for Aggregathor. You must create some JSON file (for example "grid5000.json"):
+
+```
+{
+    "nodes": {
+        "ps": [
+            "paravance-8:7000"
+        ],
+        "workers": [
+            "paravance-9:7000",
+            "paravance-10:7000"
+        ]
+    }
+}
+```
+
+Note that "ps" machine is the one where you will deploy AggregaThor via CK
+
+Now you must register this configuration in the CK with some name such as "grid5000" as follows:
+```
+$ ck add machine:grid5000 --type=cluster --config_file=grid5000.json
+```
+
+When asked about remote node OS, select linux-64. You can view all registered configurations of target platforms as follows:
+```
+$ ck show machine
+```
+
+You can now deploy your server on the first machine as follows:
+```
+$ ck run --target=grid5000 --cmd_key=distributed-deploy-mnist &
+```
+
+You can then run AggregaThor in a distributed mode from the "ps" node as follows:
+```
+$ ck run program:sysml19-aggregathor \
+  --cmd_key=distributed-mnist \
+  --env.NB_WORKERS=2 \
+  --env.MAX_STEP=100000 \
+  --env.CHECKPOINT_PERIOD=600 \
+  --env.EVALUATION_DELTA=1000 \
+  --env.SUMMARY_DELTA=1000 \
+  --env.BATCH_SIZE=50 \
+  --target=grid5000
+```
+
+Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/issues/6)
 
 ## Suggestions
 
 * Improve [CK post-processing plugin](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/blob/master/program/sysml19-aggregathor/postprocess.py) for AggregaThor to automatically validate correctness or results
 * Add and test ImageNet [CK package](http://cKnowledge.org/shared-repos.html) compatible with AggregaThor
 * Improve [Jupyter notebook](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/tree/master/jnotebook/sysml19-aggregathor) with step-by-step guide (ck run jnotebook:sysml19-aggregathor)
+
+We expect the community to continue validating results from this and other SysML'19 papers.
 
 # Reproducibility badges
 
