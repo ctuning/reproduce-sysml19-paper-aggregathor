@@ -17,6 +17,7 @@ ${CK_ENV_COMPILER_PYTHON_FILE} runner.py \
  --nb-decl-byz-workers ${NB_DECL_BYZ_WORKERS} \
  --experiment-args "batch-size:${BATCH_SIZE}" \
  --max-step ${MAX_STEP} \
+ --max-steps ${MAX_STEP} \
  --learning-rate-args "${LEARNING_RATE_ARGS}" \
  --evaluation-period ${EVALUATION_PERIOD} \
  --checkpoint-period ${CHECKPOINT_PERIOD} \

@@ -12,6 +12,7 @@ ${CK_ENV_COMPILER_PYTHON_FILE} runner.py \
  --aggregator "${AGGREGATOR}" \
  --nb-workers ${NB_WORKERS} \
  --max-step ${MAX_STEP} \
+ --max-steps ${MAX_STEP} \
  --evaluation-period ${EVALUATION_PERIOD} \
  --checkpoint-period ${CHECKPOINT_PERIOD} \
  --summary-period ${SUMMARY_PERIOD} \
