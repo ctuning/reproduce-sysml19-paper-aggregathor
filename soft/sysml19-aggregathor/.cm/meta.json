@@ -1,26 +1,26 @@
 {
-  "auto_detect": "no",
+  "auto_detect": "no", 
   "customize": {
-    "check_that_exists": "yes",
-    "ck_version": 10,
-    "env_prefix": "CK_ENV_TOOL_SYSML19_AGGREGATHOR",
+    "check_that_exists": "yes", 
+    "ck_version": 10, 
+    "env_prefix": "CK_ENV_TOOL_SYSML19_AGGREGATHOR", 
     "only_for_host_os_tags": [
       "linux"
-    ],
+    ], 
     "soft_file": {
       "linux": "runner.py"
-    },
+    }, 
     "soft_path_example": {
       "linux": "/usr/bin/runner.py"
     }
-  },
-  "soft_name": "sysml19-aggregathor",
+  }, 
+  "soft_name": "sysml19-aggregathor", 
+  "sort": -100, 
   "tags": [
-    "tool",
-    "sysml19",
+    "tool", 
+    "sysml19", 
     "aggregathor"
-  ],
-  "sort": -100,
-  "template": "yes",
+  ], 
+  "template": "yes", 
   "template_type": "simple soft detection plugin for artifact evaluation (SysML'19)"
 }

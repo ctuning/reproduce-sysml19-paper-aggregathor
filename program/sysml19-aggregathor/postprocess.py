@@ -1,10 +1,8 @@
 #
-# Convert raw output of the Caffe 'time' command
-# to the CK timing format.
+# Postprocessing and unifying output from AggregaThor
 #
 # Developers:
-#   - Grigori Fursin, cTuning foundation / dividiti, 2016
-#   - Anton Lokhmotov, dividiti, 2016-2017
+#   - Grigori Fursin, cTuning foundation / dividiti, 2019
 #
 
 import json
@@ -46,16 +44,15 @@ def ck_postprocess(i):
               x=x[j1+1:].strip()
            d['perf'].append(x)
 
-        j1=q.find('Step 10000: top1-X-acc =')
+        j1=q.find('top1-X-acc =')
         if j1>=0:
            j2=q.find('(took',j1+1)
            if j2>=0:
               j3=q.find(' s)',j2+1)
               if j3>=0:
-                 d['top1-x-acc']=q[j1+24:j2-1].strip()
+                 d['top1-x-acc']=q[j1+12:j2-1].strip()
                  d['top1-x-acc-time']=q[j2+5:j3].strip()
                  d['post_processed']='yes'
-
 
     # Embedding to the CK pipeline
 
@@ -68,7 +65,7 @@ def ck_postprocess(i):
         if r['return']>0: return r
     else:
         rr['return']=1
-        rr['error']='failed to find the \'Total Time\' string in Caffe output'
+        rr['error']='failed to post-process results - some key strings are not found'
 
     return rr
 

@@ -40,7 +40,6 @@
       ]
     }
   }, 
-  "package_extra_name": " (zenodo snapshot for SysML'19 paper)",
   "end_full_path": {
     "linux": "AggregaThor/runner.py"
   }, 
@@ -50,6 +49,7 @@
   "only_for_target_os_tags": [
     "linux"
   ], 
+  "package_extra_name": " (zenodo snapshot for SysML'19 paper)", 
   "process_script": "install", 
   "soft_uoa": "ae86f545d6a4737f", 
   "sort": -100, 
