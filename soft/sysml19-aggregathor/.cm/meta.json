@@ -14,7 +14,7 @@
       "linux": "/usr/bin/runner.py"
     }
   }, 
-  "soft_name": "sysml19-aggregathor", 
+  "soft_name": "SysML'19 AggregaThor", 
   "sort": -100, 
   "tags": [
     "tool", 
