@@ -216,7 +216,7 @@ $ ck show machine
 
 You can now deploy your server on the first machine as follows:
 ```
-$ ck run --target=grid5000 --cmd_key=distributed-deploy-mnist &
+$ ck run program:sysml19-aggregathor --target=grid5000 --cmd_key=distributed-deploy-mnist &
 ```
 
 You can then run AggregaThor in a distributed mode from the "ps" node as follows:
