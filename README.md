@@ -240,7 +240,7 @@ Validated results: [Link](https://github.com/ctuning/reproduce-sysml19-paper-agg
 * Add and test ImageNet [CK package](http://cKnowledge.org/shared-repos.html) compatible with AggregaThor
 * Improve [Jupyter notebook](https://github.com/ctuning/reproduce-sysml19-paper-aggregathor/tree/master/jnotebook/sysml19-aggregathor) with step-by-step guide (ck run jnotebook:sysml19-aggregathor)
 
-We expect the community to continue validating results from this and other SysML'19 papers.
+We expect the community to continue validating results from this and other SysML'19 papers (see our [notes](https://arxiv.org/abs/1406.4020) and [example](http://adapt-workshop.org/motivation2016.htmlhttp://adapt-workshop.org/motivation2016.htmlhttp://adapt-workshop.org/motivation2016.html)).
 
 # Reproducibility badges
 
