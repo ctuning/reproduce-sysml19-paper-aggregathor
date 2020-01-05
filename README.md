@@ -12,7 +12,7 @@ and report your feedback [here](https://github.com/ctuning/reproduce-sysml19-pap
 * **Artifact DOI:** [Zenodo](https://doi.org/10.5281/zenodo.2548779)
 * **Evaluation methodology:** [SysML](http://cTuning.org/ae/sysml2019.html), [ACM badging](https://www.acm.org/publications/policies/artifact-review-badging), [ACM REQUEST](http://cKnowledge.org/request)
 * **Automated workflow:** [CK](https://github.com/ctuning/ck)
-* **Evaluators:** [Matteo Interlandi](https://interesaaat.github.io) (Microsoft) and [Grigori Fursin](http://fursin.net/research.html) (cTuning foundation and dividiti)
+* **Evaluators:** [Matteo Interlandi](https://interesaaat.github.io) (Microsoft) and [Grigori Fursin](http://fursin.net/research.html) (cTuning foundation)
 
 # Artifact check-list (meta-information)
 
